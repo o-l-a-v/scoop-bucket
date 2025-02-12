@@ -1,5 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "##": "Waiting for PR to be merged.",
     "version": "1.7.550802",
     "description": "The .NET uninstall tool (dotnet-core-uninstall) lets you remove .NET SDKs and runtimes from a system.",
     "homepage": "https://learn.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool",
