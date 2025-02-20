@@ -35,6 +35,11 @@
             "pwsh.exe",
             "PowerShell 7.5",
             "-WorkingDirectory ~"
+        ],
+        [
+            "pwsh.exe",
+            "PowerShell 7.5 -NoProfile",
+            "-WorkingDirectory ~ -NoProfile"
         ]
     ],
     "checkver": {
