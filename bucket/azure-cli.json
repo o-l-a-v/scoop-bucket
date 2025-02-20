@@ -1,6 +1,9 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "##": "Waiting for PR to be merged.",
+    "##": [
+        "Why here? Waiting for PR to main bucket to be merged.",
+        "Changes: Change download URL to use GitHub releases, add more purge logic, add autoupdate hash extraction"
+    ],
     "version": "2.69.0",
     "description": "A cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources",
     "homepage": "https://aka.ms/cli",
