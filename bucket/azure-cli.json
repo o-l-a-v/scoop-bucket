@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "##": [
         "Why here? Waiting for PR to main bucket to be merged.",
         "Changes: Change download URL to use GitHub releases, add more purge logic, add autoupdate hash extraction"

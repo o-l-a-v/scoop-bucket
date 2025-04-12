@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "##": "Why here? Waiting for PR to extras bucket to be merged.",
     "version": "0.64.1",
     "description": "Image optimizer for web",

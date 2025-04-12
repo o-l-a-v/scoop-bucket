@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "##": [
         "Why here? Waiting for it to be merged to extras, or Scoop v0.5.3 to be released.",
         "Workaround for https://github.com/ScoopInstaller/Scoop/pull/6092 not being merged",
