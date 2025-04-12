@@ -1,4 +1,5 @@
 {
+    "##": "Why here? Waiting for PR to get merged to Scoop main bucket.",
     "version": "0.11",
     "description": "Command Line Tool for interacting with Azure Container Registry Images",
     "homepage": "https://github.com/Azure/acr-cli",
