@@ -10,9 +10,6 @@
         "identifier": "Unknown",
         "url": "https://github.com/futo-org/Grayjay.Desktop/blob/master/LICENSE.md"
     },
-    "suggest": {
-        "Dotnet Desktop Runtime 9": "extras/windowsdesktop-runtime"
-    },
     "architecture": {
         "64bit": {
             "url": "https://updater.grayjay.app/Apps/Grayjay.Desktop/8/Grayjay.Desktop-win-x64-v8.zip",
