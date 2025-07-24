@@ -8,7 +8,7 @@
         "url": "https://css-ig.net/submit/licenses"
     },
     "url": "https://css-ig.net/bin/pinga-win64.zip",
-    "hash": "98fb71b4dc3fdd63ed59302938ee144b27bacef37a4f5b31e5efd608053dd026",
+    "hash": "367B8338D69E93DD52B6B8358C6016D08C89EECE29E8EE1E602E7B0A76DB9C43",
     "innosetup": true,
     "pre_install": [
         "Rename-Item -Path \"$dir\\pinga.exe\" -NewName \"pinga_setup.exe\"",
