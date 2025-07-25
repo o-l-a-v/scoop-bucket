@@ -1,6 +1,6 @@
 {
     "##": "Why here? Waiting for PR to extras bucket to be merged.",
-    "version": "0.64.2",
+    "version": "0.64.3",
     "description": "Image optimizer for web",
     "homepage": "https://css-ig.net/pinga",
     "license": {
@@ -8,7 +8,7 @@
         "url": "https://css-ig.net/submit/licenses"
     },
     "url": "https://css-ig.net/bin/pinga-win64.zip",
-    "hash": "367B8338D69E93DD52B6B8358C6016D08C89EECE29E8EE1E602E7B0A76DB9C43",
+    "hash": "367272c58d2dd020b2495d3000b987d7e5b8a2ec4c8f8e3942fed7dbc5f50651",
     "innosetup": true,
     "pre_install": [
         "Rename-Item -Path \"$dir\\pinga.exe\" -NewName \"pinga_setup.exe\"",
