@@ -1,5 +1,6 @@
 {
     "##": "Why here? Waiting for PR to main bucket to be merged.",
+    "version": "1.0.108",
     "description": "An agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
     "homepage": "https://www.anthropic.com/claude-code",
     "license": {
