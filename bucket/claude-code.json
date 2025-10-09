@@ -1,6 +1,6 @@
 {
     "##": "Why here? Waiting for PR to main bucket to be merged.",
-    "version": "2.0.10",
+    "version": "2.0.11",
     "description": "An agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
     "homepage": "https://www.anthropic.com/claude-code",
     "license": {
@@ -12,8 +12,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.10/win32-x64/claude.exe",
-            "hash": "440c81d458bb88e7ef31f5c3b6a7160ab787ef74debaf0d47639f64feb84b983"
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.11/win32-x64/claude.exe",
+            "hash": "b2544c991152365386a279d15b8e75a49193f2760d70f1850386987d174ce5b2"
         }
     },
     "post_install": [
