@@ -34,7 +34,7 @@
     ],
     "checkver": {
         "url": "https://css-ig.net/pinga",
-        "regex": "v([\\d+.]+)\\s"
+        "regex": "v([\\d+.]+)"
     },
     "autoupdate": {
         "url": "https://css-ig.net/bin/pinga-win64.zip"
