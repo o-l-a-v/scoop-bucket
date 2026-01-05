@@ -1,13 +1,13 @@
 {
     "##": "Why here? Waiting for it to be merged to the Scoop Main bucket.",
-    "version": "0.0.199",
+    "version": "0.0.210",
     "description": "Markdown Linter and Formatter written in Rust",
     "homepage": "https://github.com/rvben/rumdl",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rvben/rumdl/releases/download/v0.0.199/rumdl-v0.0.199-x86_64-pc-windows-msvc.zip",
-            "hash": "e693d9277d27cc5763f82f07daa753409114e0445b5cf060cc059524cae7e1dc"
+            "url": "https://github.com/rvben/rumdl/releases/download/v0.0.210/rumdl-v0.0.210-x86_64-pc-windows-msvc.zip",
+            "hash": "74cfabc807f6b82a885f7d563182453e813d6a76878948cbdbb89c221b43f0ac"
         }
     },
     "bin": "rumdl.exe",

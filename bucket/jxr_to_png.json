@@ -5,7 +5,7 @@
     "homepage": "https://github.com/ledoge/jxr_to_png",
     "license": "GPL-3.0-only",
     "url": "https://github.com/ledoge/jxr_to_png/releases/download/v1.1/release.zip",
-    "hash": "40cdc34f88ef95701c405ad80345ad98529a6067ae643626ff0a517e2e956e4d",
+    "hash": "17EA1EDC41DD89CFAFD3F28E2DCC3546E945A8099A1757EC017091D8D9940348",
     "bin": "jxr_to_png",
     "checkver": "github",
     "autoupdate": {
