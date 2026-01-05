@@ -1,0 +1,14 @@
+{
+    "##": "Why here? Not enough stars on GitHub to meet the criteria for the official Scoop Main bucket.",
+    "version": "1.1",
+    "description": "HDR JPEG XR -> PNG converter",
+    "homepage": "https://github.com/ledoge/jxr_to_png",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/ledoge/jxr_to_png/releases/download/v1.1/release.zip",
+    "hash": "40cdc34f88ef95701c405ad80345ad98529a6067ae643626ff0a517e2e956e4d",
+    "bin": "jxr_to_png",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ledoge/jxr_to_png/releases/download/v$version/release.zip"
+    }
+}
