@@ -1,5 +1,5 @@
 {
-    "##": "Why here? Waiting for it to be merged to the Scoop Main bucket.",
+    "##": "Why here? Has been added to Scoop official Main bucket.",
     "version": "0.0.218",
     "description": "Markdown Linter and Formatter written in Rust",
     "homepage": "https://github.com/rvben/rumdl",
