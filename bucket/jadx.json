@@ -23,8 +23,7 @@
     "checkver": "github",
     "autoupdate": {
         "url": [
-            "https://github.com/skylot/jadx/releases/download/v$version/jadx-$version.zip",
-            "https://github.com/skylot/jadx/raw/master/jadx-gui/src/main/resources/logos/jadx-logo.ico"
+            "https://github.com/skylot/jadx/releases/download/v$version/jadx-$version.zip"
         ]
     }
 }
