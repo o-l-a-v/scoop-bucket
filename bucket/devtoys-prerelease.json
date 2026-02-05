@@ -33,6 +33,7 @@
     "post_uninstall": [
         "if ($purge -and -not $global) {",
         "    $Directories = [string[]](",
+        "        ('{0}\\DevToys.WebView2' -f $env:LOCALAPPDATA),",
         "        ('{0}\\DevToys-preview' -f $env:LOCALAPPDATA)",
         "    )",
         "    $Directories.ForEach{",
