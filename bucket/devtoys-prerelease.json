@@ -30,6 +30,18 @@
             "DevToys Prerelease"
         ]
     ],
+    "post_uninstall": [
+        "if ($purge -and -not $global) {",
+        "    $Directories = [string[]](",
+        "        ('{0}\\DevToys-preview' -f $env:LOCALAPPDATA)",
+        "    )",
+        "    $Directories.ForEach{",
+        "        if ([System.IO.Directory]::Exists($_)) {",
+        "            $null = [System.IO.Directory]::Delete($_,$true)",
+        "        }",
+        "    }",
+        "}"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/DevToys-app/DevToys/releases",
         "jsonpath": "$[?(@.prerelease == true)].tag_name",
@@ -47,17 +59,5 @@
                 "url": "https://github.com/DevToys-app/DevToys/releases/download/v$version/devtoys_win_arm64_portable.zip"
             }
         }
-    },
-    "post_uninstall": [
-        "if ($purge -and -not $global) {",
-        "    $Directories = [string[]](",
-        "        ('{0}\\DevToys-preview' -f $env:LOCALAPPDATA)",
-        "    )",
-        "    $Directories.ForEach{",
-        "        if ([System.IO.Directory]::Exists($_)) {",
-        "            $null = [System.IO.Directory]::Delete($_,$true)",
-        "        }",
-        "    }",
-        "}"
-    ]
+    }
 }
