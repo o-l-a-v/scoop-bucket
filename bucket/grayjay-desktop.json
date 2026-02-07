@@ -58,17 +58,21 @@
     "checkver": {
         "script": [
             "<#",
-            "    Problem: FUTO replaced v16 ZIP without bumping the version number,",
+            "    # Problem",
+            "    FUTO replaced v16 ZIP without bumping the version number,",
             "    which created a hash mismatch.",
-            "    Solution: Add the five first chars of the SHA256 checksum of the",
-            "    \"Last-Modified\" response header to create a unique version number.",
+            "    * Was first: a39efb733c2e5225a17fcb8569410c100815337f75ec2af53c49eb9ec67689e8",
+            "    * And then: 95cdc53c155cc14a44cfd808c0c5e8a9c3b51b32b5b81b84e6a8ea572ba0e041",
+            "    # Solution",
+            "    Add the five first chars of the SHA256 checksum of the \"Last-Modified\"",
+            "    response header to create a unique version number.",
             "#>",
             "# Version",
             "$Version = [string](",
             "    Invoke-RestMethod -Method 'Get' -Uri 'https://updater.grayjay.app/Apps/Grayjay.Desktop/VersionLast.json'",
             ")",
             "$DownloadUri = [string] 'https://updater.grayjay.app/Apps/Grayjay.Desktop/{0}/Grayjay.Desktop-win-x64-v{0}.zip' -f $Version",
-            "# Last modified",
+            "# SHA256 of \"Last-Modified\" header",
             "$Request = [System.Net.HttpWebRequest]::Create($DownloadUri)",
             "$Request.'Method' = [string] 'HEAD'",
             "$Response = [System.Net.HttpWebResponse] $Request.GetResponse()",
@@ -84,7 +88,7 @@
             "    $Version,",
             "    $LastModifiedSha256.Substring(0, 5)",
             "),",
-            "($DownloadUri -as [uri]).'AbsolutePath',",
+            "($DownloadUri -as [uri]).'AbsolutePath'.TrimStart('/'),",
             "$DownloadUri.Split('/')[-1].TrimEnd('.zip') -join '||'"
         ],
         "regex": "(?<version>.+)[|]{2}(?<urlpath>.+)[|]{2}(?<extractdir>.+)"
@@ -92,7 +96,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://updater.grayjay.app/$matchUrl",
+                "url": "https://updater.grayjay.app/$matchUrlpath",
                 "extract_dir": "$matchExtractdir"
             }
         }
