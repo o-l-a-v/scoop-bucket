@@ -84,15 +84,15 @@
             "    $Version,",
             "    $LastModifiedSha256.Substring(0, 5)",
             "),",
-            "$DownloadUri,",
+            "($DownloadUri -as [uri]).'AbsolutePath',",
             "$DownloadUri.Split('/')[-1].TrimEnd('.zip') -join '||'"
         ],
-        "regex": "(?<version>.+)[|]{2}(?<url>.+)[|]{2}(?<extractdir>.+)"
+        "regex": "(?<version>.+)[|]{2}(?<urlpath>.+)[|]{2}(?<extractdir>.+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchUrl",
+                "url": "https://updater.grayjay.app/$matchUrl",
                 "extract_dir": "$matchExtractdir"
             }
         }
