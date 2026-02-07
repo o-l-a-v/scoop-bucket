@@ -96,7 +96,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://updater.grayjay.app/$matchUrlpath",
+                "url": "https://updater.grayjay.app/Apps/Grayjay.Desktop/$majorVersion/Grayjay.Desktop-win-x64-v$majorVersion.zip",
                 "extract_dir": "$matchExtractdir"
             }
         }
