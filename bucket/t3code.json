@@ -1,7 +1,5 @@
 {
-    "##": [
-        "Why here? It is in alpha, which does meet Scoop extras bucket criterias."
-    ],
+    "##": "Why here? It is in alpha, which does meet Scoop extras bucket criterias.",
     "version": "0.0.4",
     "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes/",

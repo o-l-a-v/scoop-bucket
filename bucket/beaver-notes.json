@@ -1,7 +1,5 @@
 {
-    "##": [
-        "Why here? For experimenting, it is also in the official Extras bucket."
-    ],
+    "##": "Why here? For experimenting, it is also in the official Extras bucket.",
     "version": "4.3.0",
     "description": "A privacy-focused note-taking application",
     "homepage": "https://beavernotes.com/",
