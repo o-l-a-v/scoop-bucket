@@ -10,10 +10,6 @@
     "homepage": "https://github.com/PowerShell/PowerShell",
     "license": "MIT",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-x86.zip",
-            "hash": "49d952b95393acc2deef5182dedba2f0e9ed4acab14a88c20bfe13ff0c72ec08"
-        },
         "64bit": {
             "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-x64.zip",
             "hash": "9e725837af682b87bb212cd1efe3657c06c540404203810857ec2516ae2ca322"
@@ -24,6 +20,8 @@
         }
     },
     "pre_install": [
+        "# Rename instead of shimming, as the shim will not show the app icon",
+        "Rename-Item -Path \"$dir\\pwsh.exe\" -NewName \"pwshp76.exe\"",
         "# Delete some included modules",
         "$ModulesToRemove = [string[]](",
         "    'Microsoft.PowerShell.PSResourceGet',",
@@ -44,12 +42,12 @@
     },
     "shortcuts": [
         [
-            "pwsh.exe",
+            "pwsh76.exe",
             "PowerShell 7.6",
             "-WorkingDirectory ~"
         ],
         [
-            "pwsh.exe",
+            "pwsh76.exe",
             "PowerShell 7.6 -NoProfile",
             "-WorkingDirectory ~ -NoProfile"
         ]
@@ -69,9 +67,6 @@
             "arm64": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/hashes.sha256"
         }
     }
 }
