@@ -5,27 +5,21 @@
         "* Add all versions to PATH (env_add_path), because a shim (bin) does not carry over the icon.",
         "* Rename all versions but the current newest stable one to avoid naming conflict."
     ],
-    "version": "7.5.5",
-    "description": "Latest stable PowerShell 7.5.x. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
+    "version": "7.6.0",
+    "description": "Latest stable PowerShell. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
     "homepage": "https://github.com/PowerShell/PowerShell",
     "license": "MIT",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-x86.zip",
-            "hash": "2106bffb6c42b2ab8b23a0e10573d0770cbf0b3731eb1cd108e59b64f9ceb17c"
-        },
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-x64.zip",
-            "hash": "9d4c9247fa5d8b090470b5c676b1ce6e22029eeab8a5cb1d11480e3840172c99"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-x64.zip",
+            "hash": "9e725837af682b87bb212cd1efe3657c06c540404203810857ec2516ae2ca322"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-arm64.zip",
-            "hash": "e36b5a5f9b1511beebe1b7589e5a5adff955349f635e411021c03aef4432c505"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-arm64.zip",
+            "hash": "c2ac26385210ebff5b0696bfb26bc74a9867fd9d561a75ea52635e553974f0cb"
         }
     },
     "pre_install": [
-        "# Rename and add to path instead of shimming, as the shim will not show the app icon",
-        "Rename-Item -Path \"$dir\\pwsh.exe\" -NewName \"pwshp75.exe\"",
         "# Delete some included modules",
         "$ModulesToRemove = [string[]](",
         "    'Microsoft.PowerShell.PSResourceGet',",
@@ -47,24 +41,22 @@
     "shortcuts": [
         [
             "pwsh.exe",
-            "PowerShell 7.5",
+            "PowerShell",
             "-WorkingDirectory ~"
         ],
         [
             "pwsh.exe",
-            "PowerShell 7.5 -NoProfile",
+            "PowerShell -NoProfile",
             "-WorkingDirectory ~ -NoProfile"
         ]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/PowerShell/PowerShell/releases",
-        "regex": "v(7\\.5\\.\\d+)"
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "v([\\w.-]+)"
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
-            },
             "64bit": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
             },

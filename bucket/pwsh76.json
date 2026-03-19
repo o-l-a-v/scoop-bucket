@@ -5,53 +5,56 @@
         "* Add all versions to PATH (env_add_path), because a shim (bin) does not carry over the icon.",
         "* Rename all versions but the current newest stable one to avoid naming conflict."
     ],
-    "version": "7.4.14",
-    "description": "Latest stable PowerShell 7.4.x. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
+    "version": "7.6.0",
+    "description": "Latest stable PowerShell 7.6.x. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
     "homepage": "https://github.com/PowerShell/PowerShell",
     "license": "MIT",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.14/PowerShell-7.4.14-win-x86.zip",
-            "hash": "f4d6f24bf94c97a35dcefb57f2d28ff7c63fa596fad44af69967d5fd6ec35001"
-        },
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.14/PowerShell-7.4.14-win-x64.zip",
-            "hash": "eb678ecfcd1690f03a0bce9d06495c100ce57c3680cd8d2d011eb1f59ef153ae"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-x64.zip",
+            "hash": "9e725837af682b87bb212cd1efe3657c06c540404203810857ec2516ae2ca322"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.14/PowerShell-7.4.14-win-arm64.zip",
-            "hash": "3ab5a40594892e10631613671a25c1e86c51735a7b47869f3c57731fc4b67e05"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0/PowerShell-7.6.0-win-arm64.zip",
+            "hash": "c2ac26385210ebff5b0696bfb26bc74a9867fd9d561a75ea52635e553974f0cb"
         }
     },
     "pre_install": [
         "# Rename and add to path instead of shimming, as the shim will not show the app icon",
-        "Rename-Item -Path \"$dir\\pwsh.exe\" -NewName \"pwshp74.exe\"",
+        "Rename-Item -Path \"$dir\\pwsh.exe\" -NewName \"pwshp76.exe\"",
         "# Delete some included modules",
-        "$Directories = [string[]](",
-        "    [System.IO.Path]::Combine($dir,'Modules','Microsoft.PowerShell.PSResourceGet')",
+        "$ModulesToRemove = [string[]](",
+        "    'Microsoft.PowerShell.PSResourceGet',",
+        "    'PackageManagement',",
+        "    'PowerShellGet'",
         ")",
-        "$Directories.ForEach{",
-        "    if ([System.IO.Directory]::Exists($_)) {",
-        "        $null = [System.IO.Directory]::Delete($_,$true)",
+        "$ModulesToRemove.ForEach{",
+        "    $Path = [System.IO.Path]::Combine($dir, 'Modules', $_)",
+        "    if ([System.IO.Directory]::Exists($Path)) {",
+        "        info ('Removing included module \"{0}\".' -f $_)",
+        "        $null = [System.IO.Directory]::Delete($Path, $true)",
         "    }",
         "}"
     ],
     "env_add_path": ".",
+    "env_set": {
+        "POWERSHELL_UPDATECHECK": "Off"
+    },
     "shortcuts": [
         [
-            "pwsh74.exe",
-            "PowerShell 7.4",
+            "pwsh76.exe",
+            "PowerShell 7.6",
             "-WorkingDirectory ~"
         ],
         [
-            "pwsh74.exe",
-            "PowerShell 7.4 -NoProfile",
+            "pwsh76.exe",
+            "PowerShell 7.6 -NoProfile",
             "-WorkingDirectory ~ -NoProfile"
         ]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/PowerShell/PowerShell/releases",
-        "regex": "v(7\\.4\\.\\d+)"
+        "regex": "v(7\\.6\\.\\d+)"
     },
     "autoupdate": {
         "architecture": {
@@ -64,9 +67,6 @@
             "arm64": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/hashes.sha256"
         }
     }
 }
