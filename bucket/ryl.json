@@ -1,5 +1,5 @@
 {
-    "##": "Why here? Not enough stars on GitHub yet for official buckets requirements.",
+    "##": "Why here? Too few stars to qualify for Scoop Extras bucket.",
     "version": "0.6.0",
     "description": "Re-implementation of yamllint in Rust",
     "homepage": "https://github.com/owenlamont/ryl",
