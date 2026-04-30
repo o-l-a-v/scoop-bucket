@@ -1,11 +1,11 @@
 {
     "##": "Why here? For experimenting, it is also in the official Extras bucket.",
-    "version": "4.3.0",
+    "version": "4.4.0",
     "description": "A privacy-focused note-taking application",
     "homepage": "https://beavernotes.com/",
     "license": "MIT",
-    "url": "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/4.3.0/Beaver.Notes-4.3.0-portable.exe#/dl.7z",
-    "hash": "60f31fc70feffc739c4c51ea70a4c4c8d40b03c38fbabbf792275c6057002cc7",
+    "url": "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/4.4.0/Beaver-Notes-4.4.0-portable.exe#/dl.7z",
+    "hash": "40cf1132a38a1c89c7290301cd5838afe74eb6b4764dd151838bf0b830347f5a",
     "architecture": {
         "64bit": {
             "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\""
@@ -55,6 +55,6 @@
         "github": "https://github.com/Beaver-Notes/Beaver-Notes"
     },
     "autoupdate": {
-        "url": "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/$version/Beaver.Notes-$version-portable.exe#/dl.7z"
+        "url": "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/$version/Beaver-Notes-$version-portable.exe#/dl.7z"
     }
 }
