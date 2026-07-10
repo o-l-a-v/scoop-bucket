@@ -1,11 +1,11 @@
 {
     "##": "Why here? I want to use the ZIP with JRE included, unlike Scoop official Extras bucket.",
-    "version": "1.5.5",
+    "version": "1.5.6",
     "description": "Dex to Java decompiler",
     "homepage": "https://github.com/skylot/jadx",
     "license": "Apache-2.0",
-    "url": "https://github.com/skylot/jadx/releases/download/v1.5.5/jadx-gui-1.5.5-with-jre-win.zip",
-    "hash": "ff4c0bd240f08dc395735e337b3aefd8509d8a4f0bf48087247281c9a4fb0f79",
+    "url": "https://github.com/skylot/jadx/releases/download/v1.5.6/jadx-gui-1.5.6-with-jre-win.zip",
+    "hash": "56a870460d03d3d6f22eb0908c33e298bc7370c952a6b7fa48c22a187ecd690b",
     "pre_install": "Rename-Item -Path (Resolve-Path -Path \"$dir\\jadx-gui-*.exe\").Path -NewName \"jadx-gui.exe\"",
     "bin": "jadx-gui.exe",
     "shortcuts": [
