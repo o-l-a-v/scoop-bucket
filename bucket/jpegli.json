@@ -1,9 +1,9 @@
 {
     "##": [
         "Why here?",
-        "* libjxl v0.12.0 do not include jpegli anymore.",
-        "* google/jpegli have no releases or binaries.",
-        "Will change to dedicated JPEGLI repo in the future if releases with binaries are made."
+        "* libjxl/libjxl since v0.12.0 does not include jpegli anymore",
+        "* google/jpegli has no releases or binaries",
+        "I will change to using the dedicated JPEGLI repo in the future if releases with binaries are made available."
     ],
     "version": "0.11.2",
     "description": "jpegli JPEG codec (encoder and decoder)",
