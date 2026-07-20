@@ -5,18 +5,18 @@
         "* Add all versions to PATH (env_add_path), because a shim (bin) does not carry over the icon.",
         "* Rename all versions but the current newest stable one to avoid naming conflict."
     ],
-    "version": "7.6.3",
+    "version": "7.4.18",
     "description": "Latest stable PowerShell. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
     "homepage": "https://github.com/PowerShell/PowerShell",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-x64.zip",
-            "hash": "07ddb0d00b660459560ef82a9841da7705b27cd5dcca5a0d7b025a98eca29eca"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.18/PowerShell-7.4.18-win-x64.zip",
+            "hash": "d018ed5f92ff15a28442dce6a804b1e2aa6153d9fe1e9a06de8fd8142b171f4a"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-arm64.zip",
-            "hash": "2ece90557c370bb5ee03275ef41f2a49e26ea85defcf2052aca32c20dadb62c2"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.18/PowerShell-7.4.18-win-arm64.zip",
+            "hash": "170dd0f4f045ffbd00ace0582321a4da0894b36cbdce3abcfb3bd8fca596ea3b"
         }
     },
     "pre_install": [
