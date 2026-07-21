@@ -25,7 +25,10 @@
         "    }",
         "}"
     ],
-    "bin": "T3 Code (Alpha).exe",
+    "bin": [
+        "T3 Code (Alpha).exe",
+        "t3code"
+    ],
     "shortcuts": [
         [
             "T3 Code (Alpha).exe",
