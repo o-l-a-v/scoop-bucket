@@ -1,6 +1,6 @@
 {
     "##": "Why here? Waiting for PR to be merged to the Scoop official Main bucket.",
-    "version": "1.28.4-277c9",
+    "version": "1.28.5-60adc",
     "description": "Image optimizer for web",
     "homepage": "https://css-ig.net/pingo",
     "license": {
@@ -8,7 +8,7 @@
         "url": "https://css-ig.net/submit/licenses"
     },
     "url": "https://css-ig.net/bin/pingo-win64.zip",
-    "hash": "277c9cd41924d0ecc4b3ff3b75d3c9844ad14113c392f442c326b007183fc284",
+    "hash": "60adcfb1bdfbcb96776baad357078927b269771d3d49feb7b9d190d39a72248e",
     "bin": "pingo.exe",
     "checkver": {
         "script": [
