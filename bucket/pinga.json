@@ -7,7 +7,7 @@
         "identifier": "Unknown",
         "url": "https://css-ig.net/submit/licenses"
     },
-    "url": "https://css-ig.net/bin/pinga-win64.zip",
+    "url": "https://css-ig.net/bin/pinga.zip",
     "hash": "71b0407de554edd233ca39c292093f67e6b5eee3284a7297d0025834756c3f0c",
     "innosetup": true,
     "pre_install": [
@@ -50,7 +50,7 @@
             "# Get SHA256 checksum",
             "$WebClient = [System.Net.WebClient]::new()",
             "$Sha256 = [string](",
-            "    (Get-FileHash -InputStream ($WebClient.OpenRead('https://css-ig.net/bin/pinga-win64.zip')) -Algorithm 'SHA256').'Hash'.ToLower()",
+            "    (Get-FileHash -InputStream ($WebClient.OpenRead('https://css-ig.net/bin/pinga.zip')) -Algorithm 'SHA256').'Hash'.ToLower()",
             ")",
             "if ($null -ne $WebClient) {",
             "    $WebClient.Dispose()",
@@ -61,6 +61,6 @@
         "regex": "([\\d+.]+-[\\da-f]{5})"
     },
     "autoupdate": {
-        "url": "https://css-ig.net/bin/pinga-win64.zip"
+        "url": "https://css-ig.net/bin/pinga.zip"
     }
 }
