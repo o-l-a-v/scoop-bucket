@@ -1,13 +1,13 @@
 {
     "##": "Why here? It is in alpha, which does meet Scoop extras bucket criterias.",
-    "version": "0.0.33",
+    "version": "0.0.34",
     "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.33/T3-Code-0.0.33-x64.exe#t3code.7z",
-            "hash": "c472d849aaebec7d9ea625973c0f8106c4d31cc5b7affe7be605673666da5453",
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.34/T3-Code-0.0.34-x64.exe#t3code.7z",
+            "hash": "3fadb77d88bde89e09903dee67a715dce31de484169325b05482d149b9776c71",
             "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\""
         }
     },
