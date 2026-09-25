@@ -1,5 +1,5 @@
 {
-    "##": "Why here? Testing. Do not know what license it uses.",
+    "##": "Why here? Testing. See if checkver and autoupdate mechanism keeps working.",
     "version": "1.0.0",
     "description": "Task Manager by retired Microsoft engineer Dave Plummer",
     "homepage": "https://www.tmog.org",
