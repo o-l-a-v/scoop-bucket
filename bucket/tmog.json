@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Task Manager by retired Microsoft engineer Dave Plummer",
     "homepage": "https://www.tmog.org",
-    "license": "Unknown",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://www.tmog.org/rtm/downloads/TMOG-Task-Manager-Setup.exe",
