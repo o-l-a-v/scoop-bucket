@@ -1,23 +1,37 @@
 {
-    "##": "Why here? It is in alpha, which does meet Scoop extras bucket criterias.",
+    "##": [
+        "Why here?",
+        "* Testing",
+        "* Not sure whether it is still considered beta",
+        "  * EXE inside is still named beta",
+        "  * GitHub release info says it is stable"
+    ],
     "version": "0.1.0",
     "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.0/T3-Code-0.1.0-x64.exe#t3code.7z",
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.0/T3-Code-0.1.0-x64.exe#dl.7z",
             "hash": "5d79949156dc5a6974f1ddab6d68ce6183c9c9d9e8955f40c8292caf1db483ab",
             "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\""
+        },
+        "arm64": {
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.0/T3-Code-0.1.0-arm64.exe#dl.7z",
+            "hash": "eb46e43b5da5d0db638cf56d1ebe783b382ddf35b3af34e40c9d40698465a0a5",
+            "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" -DestinationPath \"$dir\""
         }
     },
     "post_install": [
         "# Clean up leftovers",
+        "## Assets",
         "$Directories = [string[]](",
         "    \"$dir\\`$PLUGINSDIR\",",
         "    \"$dir\\`$R0\"",
         ")",
+        "## For whatever reason this small wait was required",
         "Start-Sleep -Milliseconds 50",
+        "## Delete leftovers that still exists",
         "$Directories.ForEach{",
         "    if ([System.IO.Directory]::Exists($_)) {",
         "        $null = [System.IO.Directory]::Delete($_,$true)",
@@ -27,15 +41,15 @@
     ],
     "bin": [
         [
-            "T3 Code (Alpha).exe",
+            "T3 Code (Beta).exe",
             "t3code",
             "--user-data-dir=\"$dir\\data\""
         ]
     ],
     "shortcuts": [
         [
-            "T3 Code (Alpha).exe",
-            "T3 Code (Alpha)",
+            "T3 Code (Beta).exe",
+            "T3 Code (Beta)",
             "--user-data-dir=\"$dir\\data\""
         ]
     ],
@@ -62,7 +76,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#t3code.7z"
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-arm64.exe#dl.7z"
             }
         }
     }
