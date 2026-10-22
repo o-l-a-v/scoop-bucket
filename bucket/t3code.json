@@ -6,19 +6,19 @@
         "  * EXE inside is still named beta",
         "  * GitHub release info says it is stable"
     ],
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.1/T3-Code-0.1.1-x64.exe#dl.7z",
-            "hash": "24d0375a5c6f386b7c2e758de94f18f51051ba84284e07b87fefbe83995d721c",
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.2/T3-Code-0.1.2-x64.exe#dl.7z",
+            "hash": "485bacca5a16c0a1df9e1c696bbfe7a1015fe86b71c85d2838cc459224f2ba8d",
             "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\""
         },
         "arm64": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.1/T3-Code-0.1.1-arm64.exe#dl.7z",
-            "hash": "ab57e1cf6fb5b16d28b9c0b48a61475b3d02bd5dbff70123a59692093f444a78",
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.2/T3-Code-0.1.2-arm64.exe#dl.7z",
+            "hash": "14257dfd3910c80201f5b7ba2e77d6818c67eb5259dd0098b66e67c6ddb82443",
             "pre_install": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" -DestinationPath \"$dir\""
         }
     },
