@@ -1,6 +1,6 @@
 {
     "##": "Why here? Testing.",
-    "version": "1.8.0",
+    "version": "1.9.2",
     "description": "Fast, private, local-first notes.",
     "homepage": "https://notes.futo.tech",
     "license": {
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gitlab.futo.org/api/v4/projects/488/packages/generic/futo-notes/v1.8.0/FUTO-Notes-1.8.0-x64-setup.exe#dl.zip",
-            "hash": "9f20fd3ec795fe98bb41ca39c72787652e025164b7d6748522707fce1e2a955b"
+            "url": "https://gitlab.futo.org/api/v4/projects/488/packages/generic/futo-notes/v1.9.2/FUTO-Notes-1.9.2-x64-setup.exe#dl.zip",
+            "hash": "3970e797804d81c68db753b010f559c26959f115723c857d00f8d1816be2ee9d"
         }
     },
     "post_install": [
