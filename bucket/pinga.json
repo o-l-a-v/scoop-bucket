@@ -1,6 +1,6 @@
 {
     "##": "Why here? Waiting for PR to be merged to the Scoop official Extras bucket.",
-    "version": "1.0.0.1+c3819",
+    "version": "1.0.0.2+b8bb9",
     "description": "Image optimizer for web",
     "homepage": "https://css-ig.net/pinga",
     "license": {
@@ -8,7 +8,7 @@
         "url": "https://css-ig.net/submit/licenses"
     },
     "url": "https://css-ig.net/bin/pinga.zip",
-    "hash": "c3819c89b20a508bc90df099c6daddfb36872b883d8263a86cbefd774064b824",
+    "hash": "b8bb9ca9c2c1a899751d15d20fdf0c61a27e96f62fd722ab3f4af859655fcdbd",
     "innosetup": true,
     "pre_install": [
         "# Rename the installer because it is named the same as the executable inside it",
